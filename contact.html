@@ -63,29 +63,6 @@
   })();
 </script>
 
-<!-- Web-Vitals -->
-<script src="https://unpkg.com/web-vitals@2.1.4/dist/web-vitals.iife.js"></script>
-
-<script>
-  (function() {
-    // Function to send the metrics to a backend server or analytics service
-    function sendToAnalytics(metric) {
-      var body = JSON.stringify(metric);
-      var xhr = new XMLHttpRequest();
-      xhr.open('POST', 'https://your-backend-server.com/collect-metrics', true);
-      xhr.setRequestHeader('Content-Type', 'application/json');
-      xhr.send(body);
-    }
-
-    // Collect and report various web vitals
-    webVitals.getCLS(sendToAnalytics);
-    webVitals.getFID(sendToAnalytics);
-    webVitals.getLCP(sendToAnalytics);
-    webVitals.getFCP(sendToAnalytics);
-    webVitals.getTTFB(sendToAnalytics);
-  })();
-</script>
-
 </head>
 
 <body id="top">
